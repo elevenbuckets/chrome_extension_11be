@@ -1,0 +1,15 @@
+{
+    "name": "Getting Started example",
+    "version": "1.0",
+    "description": "Build an Extension",
+    "permissions": [
+        "storage","nativeMessaging"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "manifest_version": 2
+}

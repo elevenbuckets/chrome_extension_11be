@@ -5,7 +5,6 @@
       var button = document.getElementById("mybutton");
       button.person_name = "Bob";
       button.addEventListener("click", function() {
-        alert(greeting + button.person_name + ".");
         window.postMessage({ type: "Connect_WS_RPC", text: "Hello from the webpage!" }, "*");
       }, false);
     </script>

@@ -4,6 +4,9 @@ chrome.runtime.sendNativeMessage('ping_pong',
     console.log("Received " + response);
   });
 
-  chrome.runtime.onMessage.addListener(function(message, callback) {
-    console.log(message)
+
+  chrome.runtime.onConnect.addListener(function(port) {
+    port.onMessage.addListener(function(msg) {
+        console.log(msg)
+    });
   });

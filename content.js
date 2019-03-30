@@ -10,3 +10,7 @@ window.addEventListener("message", function(event) {
     port.postMessage(event.data.text);
   }
 }, false);
+
+port.onMessage.addListener(function(msg) {
+    console.log(msg);
+});

@@ -7,6 +7,7 @@ chrome.runtime.sendNativeMessage('ping_pong',
 
   chrome.runtime.onConnect.addListener(function(port) {
     port.onMessage.addListener(function(msg) {
-        console.log(msg)
+        console.log(msg);
+        port.postMessage("Response from extension for : " + msg);
     });
   });

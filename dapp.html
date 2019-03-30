@@ -1,9 +1,12 @@
 <html>
-    <button id="mybutton">click me</button>
+    <button id="mybutton">click me to connnect rpc-ws</button>
     <script>
       var greeting = "hello, ";
       var button = document.getElementById("mybutton");
       button.person_name = "Bob";
+      button.addEventListener("click", function() {
+        alert(greeting + button.person_name + ".");
+      }, false);
       button.addEventListener("click", function() {
         window.postMessage({ type: "Connect_WS_RPC", text: "Hello from the webpage!" }, "*");
       }, false);

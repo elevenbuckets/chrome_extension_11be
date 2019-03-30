@@ -13,4 +13,6 @@ window.addEventListener("message", function(event) {
 
 port.onMessage.addListener(function(msg) {
     console.log(msg);
+    alert(msg);
+    window.postMessage({ type: "Connect_WS_RPC_Confirm", text: "Hello from server" }, "*");
 });

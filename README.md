@@ -2,11 +2,11 @@
 
 ## How to run 
 
-copy ping_pong.json to ~/.config/google-chrome/NativeMessagingHosts/
+Make the necessary change to host/spear_iron.json for the path based on your machine, and repalce the {extension-id} with this extension id(to find the extension id you can refer to the load the extension page)
 
-make the nativeapp.py to be runnable
+copy host/spear_iron.json to ~/.config/google-chrome/NativeMessagingHosts/
 
-replace the {extension-id} with this extension id(to find the extension id you can refer to the load the extension page)
+make the host/nativeApp.js to be runnable
 
 Then just load the extension 
 

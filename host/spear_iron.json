@@ -7,6 +7,6 @@
         "default_icon": "icons/message.svg"
       },
     "allowed_origins": [
-        "chrome-extension://lmfafocpgmmpjlkmnicnoponjbegagpa/"
+        "chrome-extension://{extension-id}/"
     ]
   }

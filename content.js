@@ -9,6 +9,12 @@ window.addEventListener("message", function(event) {
     console.log("Content script received: " + event.data.text);
     port.postMessage(event.data.text);
   }
+
+
+  if (event.data.type && (event.data.type == "Connect_WS-RPC")) {
+    console.log("Content script received: " + event.data.text);
+    port.postMessage(JSON.stringify(event.data));
+  }
 }, false);
 
 port.onMessage.addListener(function(msg) {

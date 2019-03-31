@@ -1,5 +1,6 @@
 <html>
-<button id="mybutton">click me to connnect rpc-ws</button>
+<button id="mybutton">Test message passing</button>
+<button id="connectbutton">click me to connnect rpc-ws</button>
 <script>
     var greeting = "hello, ";
     var button = document.getElementById("mybutton");
@@ -20,6 +21,17 @@
             alert(event.data.text);
         }
     }, false);
+
+
+    var connectButton = document.getElementById("connectbutton");
+
+    connectButton.addEventListener("click", function () {
+        window.postMessage({ type: "Connect_WS-RPC", text: "This is the request for connect RPC", id: "dapp_1" }, "*");
+    }, false);
+
+
+
+
 </script>
 
 </html>
